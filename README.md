@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://drive.google.com/file/d/1V5uYyZskpJcseOxHpAkq_p6iPCQ4dkAU/view?usp=sharing" alt="AccuSport Logo" width="160px">
+  <img src="https://github.com/Andresarbarrero/accusport_scouting_profesional/blob/main/img/Logo%20ORG.jpg" alt="AccuSport Logo" width="160px">
 </p>
 
 <p align="center">
-  <img src="https://drive.google.com/file/d/1H3F6j81pJaP-g1O07QdBppXVQuickddx/view?usp=sharin"AccuSport_Scoutin.png" alt="AccuSport Scouting Banner" width="100%">
+  <img src="https://github.com/Andresarbarrero/accusport_scouting_profesional/blob/main/img/Banner%20ORG.png" alt="AccuSport Scouting Banner" width="100%">
 </p>
 
 # ⚽ AccuSport Scouting System  
