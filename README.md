@@ -9,22 +9,46 @@
 # ⚽ AccuSport Scouting System  
 **Plataforma profesional de análisis, registro y seguimiento de futbolistas – AccuSport Colombia**
 
-Este repositorio contiene el desarrollo completo del **AccuSport Scouting System**, una plataforma tecnológica avanzada diseñada para profesionalizar el análisis y scouting de futbolistas en Colombia y Latinoamérica.  
-El sistema combina metodologías modernas de scouting, análisis de datos, dashboards interactivos y un backend escalable en la nube.
-
+Este repositorio contiene el desarrollo completo del **AccuSport Scouting System**, una plataforma tecnológica integral diseñada para profesionalizar el scouting y análisis futbolístico en Colombia, Latinoamérica y el mundo.
+Su objetivo es unir metodologías modernas de observación, herramientas tecnológicas de análisis, bases de datos escalables, formularios inteligentes, dashboards interactivos y reportería profesional en un solo ecosistema técnico.
 ---
 
 # 🚀 Propósito del Proyecto
 
-El objetivo principal del sistema es:
+AccuSport System nace para resolver una necesidad crítica:
+
+Centralizar, estandarizar y profesionalizar el proceso de scouting y análisis de jugadores con un enfoque moderno y global.
  
-- Estandarizar el proceso de observación y análisis de futbolistas.
-- Registrar jugadores, equipos, ligas, partidos y métricas clave.
-- Integrar formularios para carga manual o importación vía Excel.
-- Almacenar todo en una base de datos en la nube (PostgreSQL + Railway).
-- Facilitar la creación de reportes profesionales automáticos.
-- Permitir compartir perfiles de jugadores en LinkedIn y redes.
-- Servir como herramienta central de AccuSport Colombia para scouting profesional.
+Los objetivos principales son:
+
+- Registrar jugadores, equipos, competencias y partidos con estructura profesional.  
+- Estandarizar el proceso de observación en vivo, por video y mediante plataformas tecnológicas.  
+- Integrar carga manual vía formularios y carga masiva mediante Excel.  
+- Almacenar toda la información en una base de datos en la nube altamente escalable (PostgreSQL + Railway).  
+- Permitir análisis modernos mediante dashboards interactivos y perfiles profesionales.  
+- Generar reportes automáticos y plantillas listas para publicar en redes sociales (LinkedIn, Instagram, etc.).  
+- Servir como herramienta central de AccuSport Colombia para scouting profesional y cómo una base para scouts, clubes, agencias y analistas en múltiples regiones del mundo.
+
+---
+# 🌍 Enfoque Global: Scouting Mundial con Tecnología
+
+AccuSport System combina **scouting tradicional presencial** con **scouting digital moderno**, utilizando herramientas avanzadas como:
+
+- **WyScout**  
+- **InStat**  
+- **SICS VideoMatch**  
+- **Hudl**  
+- **BePro / Veo**  
+- **FBref / Opta-like data (según disponibilidad futura)**  
+
+Además, incorpora un módulo de análisis contextual mediante la **API de football-data.org**, lo que permite:
+
+- Consultar ligas de todo el mundo  
+- Acceder a partidos, resultados y calendarios  
+- Crear reportes automáticos de contexto competitivo  
+- Guardar estos reportes en la base de datos  
+
+Este enfoque permite trabajar **con ligas locales, regionales y también con ligas internacionales en Europa, Asia, África y América**.
 
 ---
 
@@ -88,21 +112,49 @@ Cada jugador se evalúa según su impacto en estas fases.
 
 ---
 
-## 📊 3. KPIs Modernos Integrados
+# 📊 3. KPIs Fundamentales (Versión Inicial)
 
-- xThreat  
-- Acciones progresivas  
-- Heatmaps  
-- Duelos ganados  
-- Recuperaciones por zona  
-- Acciones por 90’  
-- Expected Play Contribution  
-- Indicadores técnico–tácticos  
-- Índices de rendimiento por posición  
+Para esta primera etapa del proyecto escogimos un conjunto de **métricas clave** que son:
 
+- Fundamentales en el scouting moderno  
+- Posibles de medir desde tu BD actual  
+- Atractivas visualmente para dashboards y redes  
+- Escalables para futuras métricas avanzadas  
+
+## KPIs que sí maneja AccuSport desde la V1:
+**Generales**  
+- Partidos jugados  
+- Minutos jugados  
+- Goles  
+- Asistencias  
+- Tiros totales  
+- Tiros al arco  
+- Pases completados  
+- Centros intentados / completados  
+- Duelos ganados / perdidos  
+- Tarjetas  
+
+**Defensivos**  
+- Intercepciones  
+- Entradas ganadas  
+- Despejes  
+- Bloqueos  
+
+**Ofensivos**  
+- Regates intentados / exitosos  
+- Ocasiones creadas  
+
+**Valoraciones (1–5)**  
+- Técnica  
+- Táctica  
+- Física  
+- Mental  
+
+**Potencial (categorías estándar)**  
+- Bajo – Medio – Alto – Elite  
 ---
 
-## 🥇 4. Análisis por Posición
+## 🥇 4. Análisis por Posición (Versión futura)
 
 ### **Porteros**
 - Juego aéreo  
@@ -136,41 +188,62 @@ Cada jugador se evalúa según su impacto en estas fases.
 
 ---
 
+
 # 🧱 Arquitectura del Sistema
 
-### **Backend**
-- Lenguaje: **Python**  
-- Base de datos: **PostgreSQL (Railway Cloud)**  
-- Scripts de carga:
-  - Importación de Excel → PostgreSQL  
-  - Carga de jugadores  
-  - Conexión vía psycopg2 / SQLAlchemy  
+## Backend
+- **Lenguaje:** Python  
+- **Base de datos:** PostgreSQL (Railway Cloud)  
+- **Librerías:** psycopg2, SQLAlchemy  
+- **Módulos:**  
+  - Carga de Excel → BD  
+  - Validación y actualización de jugadores  
+  - Integración API football-data.org  
 
-### **Frontend**
-- **Streamlit**  
-- Formularios interactivos  
-- Visualización gráfica  
-- Dashboard modular  
+## Frontend (App)
+- **Framework:** Streamlit  
+- **Módulos principales:**  
+  - Registro de jugadores  
+  - Edición de perfiles  
+  - Carga de informes  
+  - Dashboard de análisis  
+  - Módulo API internacional  
 
-### **Infraestructura**
-- Railway para la BD  
-- Streamlit Cloud para despliegue  
-- GitHub para versionamiento  
+## Infraestructura
+- Railway → Base de datos  
+- Streamlit Cloud → Despliegue  
+- GitHub → Versionamiento  
 
 ---
 
 # 🗂 Modelo de Datos
 
-Tablas principales:
+## Tablas principales:
 
 | Tabla | Descripción |
 |-------|-------------|
-| `players` | Datos del jugador |
-| `teams` | Club o academia |
-| `leagues` | Liga o competencia |
-| `matches` | Información de los partidos |
-| `stats` | Métricas del rendimiento |
-| `scouting_reports` | Informes detallados |
+| players | Información del jugador (perfil, físico, atributos) |
+| teams | Clubes o academias |
+| leagues | Ligas nacionales e internacionales |
+| matches | Partidos y calendarios |
+| stats | Estadísticas por partido |
+| scouting_reports | Informes detallados|
+| api_context_reports | Reportes automáticos de la API |
+
+---
+# 🌐 Módulo Internacional – API football-data.org
+
+Este módulo permite:
+
+- Seleccionar una liga del mundo  
+- Consultar temporadas y partidos  
+- Generar un **reporte automático** con:  
+  - Resultado  
+  - Equipos  
+  - Fecha  
+  - Resumen interpretado  
+- Añadir comentarios manuales del usuario  
+- Guardarlo en la base de datos como **contexto competitivo**  
 
 ---
 
@@ -187,31 +260,26 @@ connection = psycopg2.connect(
     database=os.getenv("PGDATABASE"),
     port=os.getenv("PGPORT")
 )
-
+```
 # 🛠 Instalación Local
+
+```bash
 git clone https://github.com/usuario/accusport-scouting-system.git
 cd accusport-scouting-system
 pip install -r requirements.txt
 streamlit run streamlit_app/Main.py 
-
 ```
 
 # 🌐 Visión a Futuro
 
-Reportes PDF automáticos
-
-Comparador de jugadores
-
-Panel para clubes/agentes
-
-Machine Learning para predicción de talento
-
-Integración con APIs (Wyscout, InStat, FBref)
-
-Módulo multiusuarios
-
-Tableros profesionales y responsivos
-
+- Dashboards avanzados
+- Comparador de jugadores profesional
+- Reportes PDF automáticos
+- Módulo multiusuario
+- Machine Learning para predicción de talento
+- Integraciones con APIs premium
+- Panel para clubes y agencias
+ 
 # 👨‍💻 Autor
 
 Andrés Barrero
